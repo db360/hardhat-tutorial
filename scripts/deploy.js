@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const BlockchainMusicCoin = await hre.ethers.getContractFactory("BlockChainMusicCoin");
-  const bcmc = await BlockchainMusicCoin.deploy(hre.ethers.BigNumber.from('1000000000000000000'), "BlockchainMusic Coin", "BCMC");
+  const bcmc = await BlockchainMusicCoin.deploy(hre.ethers.BigNumber.from('100000000000000000000000000000'), "BlockchainMusic Coin", "BCMC");
 
   await bcmc.deployed();
 
