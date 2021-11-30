@@ -14,12 +14,12 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
+  const BlockchainMusicCoin = await hre.ethers.getContractFactory("BlockChainMusicCoin");
+  const bcmc = await BlockchainMusicCoin.deploy(hre.ethers.BigNumber.from('1000000000000000000'), "BlockchainMusic Coin", "BCMC");
 
-  await greeter.deployed();
+  await bcmc.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("BlockchainMusic Coin deployed to:", bcmc.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
